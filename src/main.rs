@@ -94,18 +94,25 @@ fn print_inventory(query: Query<&Inventory, With<Player>>) {
     for inv in &query {
         for (id, item) in inv.items.iter().enumerate() {
             print!("{}", item);
-            if id > 0 && id % 8 == 0 {
+            if (id + 1) % 8 == 0 {
                 println!();
             }
         }
     }
 }
 
+fn print_number() {
+    println!("{}", 1);
+}
+
 // Main App
 fn main() {
     App::new()
-        .add_plugins(machines::MachinesPlugin)
+        .add_plugins(DefaultPlugins)
+        //.add_plugins(machines::MachinesPlugin)
         .add_systems(Startup, setup)
-        .add_systems(Update, (print_position_system, print_inventory).chain())
+        //.add_systems(Update, (print_position_system, print_inventory).chain())
+        .insert_resource(Time::<Fixed>::from_hz(15.0))
+        .add_systems(FixedUpdate, print_number)
         .run();
 }

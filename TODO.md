@@ -1,5 +1,5 @@
 - [x] fix TODO.md format
-- [ ] build the general Gameloop
+- [x] build the general Gameloop
 - [ ] add a basic starup menu
 - [ ] add components for a simple test-machine
 - [ ] add player components
