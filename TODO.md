@@ -3,6 +3,9 @@
 - [ ] add a basic starup menu
 - [ ] add components for a simple test-machine
 - [ ] add player components
+  - [x] Position
+  - [x] Inevntory
+  - [ ] ...
 
 ---
 
