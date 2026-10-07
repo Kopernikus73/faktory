@@ -1,7 +1,10 @@
 use bevy::prelude::*;
 use std::fmt;
 
+use crate::options::OptionsPlugin;
+
 mod machines;
+mod options;
 
 // Entities
 #[derive(Component)]
@@ -109,10 +112,10 @@ fn print_number() {
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
+        .add_plugins(options::OptionsPlugin)
         //.add_plugins(machines::MachinesPlugin)
         .add_systems(Startup, setup)
         //.add_systems(Update, (print_position_system, print_inventory).chain())
-        .insert_resource(Time::<Fixed>::from_hz(15.0))
         .add_systems(FixedUpdate, print_number)
         .run();
 }
