@@ -6,6 +6,7 @@
   - [x] Position
   - [x] Inevntory
   - [ ] ...
+- [ ] add achievement system
 
 ---
 

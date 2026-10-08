@@ -1,8 +1,6 @@
 use bevy::prelude::*;
 use std::fmt;
 
-use crate::options::OptionsPlugin;
-
 mod machines;
 mod options;
 
@@ -68,7 +66,7 @@ impl Default for Inventory {
 }
 
 // Systems
-fn setup(mut commands: Commands) {
+fn setup_player(mut commands: Commands) {
     let mut example_player_inv = Inventory::default();
     example_player_inv.items[0] = InventoryItem {
         item: Item::CopperPlate,
@@ -86,6 +84,7 @@ fn setup(mut commands: Commands) {
     commands.spawn((Player, Position { x: 123.0, y: 321.0 }, example_player_inv));
 }
 
+/*
 fn print_position_system(query: Query<&Position>) {
     for position in &query {
         println!("P({}|{})", position.x, position.y);
@@ -103,10 +102,7 @@ fn print_inventory(query: Query<&Inventory, With<Player>>) {
         }
     }
 }
-
-fn print_number() {
-    println!("{}", 1);
-}
+*/
 
 // Main App
 fn main() {
@@ -114,8 +110,8 @@ fn main() {
         .add_plugins(DefaultPlugins)
         .add_plugins(options::OptionsPlugin)
         //.add_plugins(machines::MachinesPlugin)
-        .add_systems(Startup, setup)
-        //.add_systems(Update, (print_position_system, print_inventory).chain())
-        .add_systems(FixedUpdate, print_number)
+        .add_systems(Startup, setup_player)
+        //.add_systems(Update, )
+        //.add_systems(FixedUpdate, )
         .run();
 }
