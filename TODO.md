@@ -7,6 +7,7 @@
   - [x] Inevntory
   - [ ] ...
 - [ ] add achievement system
+- [x] add license
 
 ---
 
