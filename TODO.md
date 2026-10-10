@@ -15,6 +15,6 @@
 
 OR
 
-- [ ] add a player sprite
-- [ ] let the user navigate the player
+- [x] add a player sprite
+- [x] let the user navigate the player
 
