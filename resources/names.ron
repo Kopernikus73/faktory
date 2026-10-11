@@ -1,0 +1,29 @@
+[
+  // items
+  Name(
+    id: 0x0,
+    name: ""
+  ),
+  Name(
+    id: 0x1,
+    name: "Plate 1"
+  ),
+  Name(
+    id: 0x2,
+    name: "Plate 2"
+  ),
+
+  // recipes
+  Name(
+    id: 0xF00,
+    name: "No Recipe",
+  ),
+  Name(
+    id: 0xF01,
+    name: "Alchemize Plate 2",
+  ),
+  Name(
+    id: 0xF02,
+    name: "Alchemize Plate 1",
+  ),
+]
