@@ -1,0 +1,12 @@
+[
+  RonItem(
+    id: 0x1,
+    name_id: 0x1,
+    stack_size: 0x10,
+  ),
+  RonItem(
+    id: 0x2,
+    name_id: 0x2,
+    stack_size: 0x10
+  )
+]
